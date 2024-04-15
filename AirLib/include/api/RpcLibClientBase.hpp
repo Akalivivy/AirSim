@@ -162,7 +162,7 @@ namespace airlib
 
         void simSetWind(const Vector3r& wind) const;
 
-        std::string RpcLibClientBase::simSetCustomInfo(const std::string& custom_info) const;
+        std::string RpcLibClientBase::simCustomInfo(const std::string& custom_info) const;
         
         vector<string> listVehicles();
 

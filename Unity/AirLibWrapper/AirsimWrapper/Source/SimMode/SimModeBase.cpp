@@ -101,7 +101,7 @@ void SimModeBase::setWind(const msr::airlib::Vector3r& wind) const
     throw std::domain_error("setWind is not implemented by SimMode");
 }
 
-std::string ASimModeBase::setCustomInfo(const std::string& custom_info) const
+std::string ASimModeBase::customInfo(const std::string& custom_info) const
 {
     return std::string();
 }
