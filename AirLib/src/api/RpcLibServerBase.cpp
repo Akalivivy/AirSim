@@ -509,6 +509,10 @@ namespace airlib
             return getWorldSimApi()->getSettingsString();
         });
 
+        pimpl_->server.bind("simSetCustomInfo", [&](const std::string& custom_info) -> void {
+            getWorldSimApi()->SetCustomInfo(custom_info);
+        });
+
         //if we don't suppress then server will bomb out for exceptions raised by any method
         pimpl_->server.suppress_exceptions(true);
     }

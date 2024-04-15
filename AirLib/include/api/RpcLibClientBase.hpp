@@ -161,6 +161,9 @@ namespace airlib
         bool isRecording();
 
         void simSetWind(const Vector3r& wind) const;
+
+        std::string RpcLibClientBase::simSetCustomInfo(const std::string& custom_info) const;
+        
         vector<string> listVehicles();
 
         std::string getSettingsString() const;

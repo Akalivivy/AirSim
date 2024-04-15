@@ -644,6 +644,11 @@ __pragma(warning(disable : 4239))
         {
             return &pimpl_->client;
         }
+
+        std::string RpcLibClientBase::simSetCustomInfo(const std::string& custom_info) const
+        {
+            return pimpl_->client.call("simSetCustomInfo", custom_info);
+        }
     }
 } //namespace
 
