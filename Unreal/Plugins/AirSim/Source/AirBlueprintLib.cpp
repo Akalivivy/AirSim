@@ -165,6 +165,12 @@ void UAirBlueprintLib::enableViewportRendering(AActor* context, bool enable)
     }
 }
 
+std::string UAirBlueprintLib::customInfo(const std::string& custom_info) const
+{
+    return std::string();
+}
+
+
 void UAirBlueprintLib::OnBeginPlay()
 {
     image_wrapper_module_ = &FModuleManager::LoadModuleChecked<IImageWrapperModule>(FName("ImageWrapper"));

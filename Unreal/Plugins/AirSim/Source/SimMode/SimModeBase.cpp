@@ -314,7 +314,7 @@ void ASimModeBase::setWind(const msr::airlib::Vector3r& wind) const
 
 std::string ASimModeBase::customInfo(const std::string& custom_info) const
 {
-    return std::string();
+    return UAirBlueprintLib::customInfo(custom_info);
 }
 
 std::unique_ptr<msr::airlib::ApiServerBase> ASimModeBase::createApiServer() const
