@@ -501,16 +501,16 @@ namespace airlib
             getWorldSimApi()->setWind(wind.to());
         });
 
+        pimpl_->server.bind("simSetCustomInfo", [&](const std::string& custom_info) -> void {
+            getWorldSimApi()->setCustomInfo(custom_info);
+        });
+
         pimpl_->server.bind("listVehicles", [&]() -> vector<string> {
             return getWorldSimApi()->listVehicles();
         });
 
         pimpl_->server.bind("getSettingsString", [&]() -> std::string {
             return getWorldSimApi()->getSettingsString();
-        });
-
-        pimpl_->server.bind("simSetCustomInfo", [&](const std::string& custom_info) -> void {
-            getWorldSimApi()->SetCustomInfo(custom_info);
         });
 
         //if we don't suppress then server will bomb out for exceptions raised by any method

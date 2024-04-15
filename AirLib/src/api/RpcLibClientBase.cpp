@@ -621,6 +621,11 @@ __pragma(warning(disable : 4239))
             pimpl_->client.call("simSetWind", conv_wind);
         }
 
+        std::string RpcLibClientBase::simSetCustomInfo(const std::string& custom_info) const
+        {
+            return pimpl_->client.call("simSetCustomInfo", custom_info);
+        }
+
         vector<string> RpcLibClientBase::listVehicles()
         {
             return pimpl_->client.call("listVehicles").as<vector<string>>();
@@ -645,10 +650,6 @@ __pragma(warning(disable : 4239))
             return &pimpl_->client;
         }
 
-        std::string RpcLibClientBase::simSetCustomInfo(const std::string& custom_info) const
-        {
-            return pimpl_->client.call("simSetCustomInfo", custom_info);
-        }
     }
 } //namespace
 
