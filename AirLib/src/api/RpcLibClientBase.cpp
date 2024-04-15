@@ -623,7 +623,7 @@ __pragma(warning(disable : 4239))
 
         std::string RpcLibClientBase::simCustomInfo(const std::string& custom_info) const
         {
-            return pimpl_->client.call("simCustomInfo", custom_info);
+            return pimpl_->client.call("simCustomInfo", custom_info).as<std::string>();
         }
 
         vector<string> RpcLibClientBase::listVehicles()
