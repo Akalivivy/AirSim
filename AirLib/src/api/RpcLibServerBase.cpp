@@ -501,8 +501,8 @@ namespace airlib
             getWorldSimApi()->setWind(wind.to());
         });
 
-        pimpl_->server.bind("simCustomInfo", [&](const std::string& custom_info) -> void {
-            getWorldSimApi()->customInfo(custom_info);
+        pimpl_->server.bind("simCustomInfo", [&](const std::string& custom_info) -> std::string {
+            return getWorldSimApi()->customInfo(custom_info);
         });
 
         pimpl_->server.bind("listVehicles", [&]() -> vector<string> {
