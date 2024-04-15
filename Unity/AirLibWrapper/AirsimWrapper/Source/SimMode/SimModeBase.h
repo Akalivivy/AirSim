@@ -48,6 +48,7 @@ public:
     virtual void continueForTime(double seconds);
     virtual void continueForFrames(uint32_t frames);
     virtual void setWind(const msr::airlib::Vector3r& wind) const;
+    std::string setCustomInfo(const std::string& custom_info) const;
     void startApiServer();
     void stopApiServer();
     bool isApiServerStarted();

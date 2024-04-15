@@ -244,6 +244,11 @@ void WorldSimApi::setWind(const Vector3r& wind) const
     simmode_->setWind(wind);
 }
 
+std::string WorldSimApi::setCustomInfo(const std::string& custom_info) const
+{
+    simmode_->setCustomInfo(custom_info);
+}
+
 std::vector<std::string> WorldSimApi::listVehicles() const
 {
     auto vehicle_names = (simmode_->getApiProvider()->getVehicleSimApis()).keys();

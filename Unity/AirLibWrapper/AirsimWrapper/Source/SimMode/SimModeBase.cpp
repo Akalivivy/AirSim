@@ -101,6 +101,11 @@ void SimModeBase::setWind(const msr::airlib::Vector3r& wind) const
     throw std::domain_error("setWind is not implemented by SimMode");
 }
 
+std::string ASimModeBase::setCustomInfo(const std::string& custom_info) const
+{
+    return std::string();
+}
+
 std::unique_ptr<msr::airlib::ApiServerBase> SimModeBase::createApiServer() const
 {
     //this will be the case when compilation with RPCLIB is disabled or simmode doesn't support APIs
