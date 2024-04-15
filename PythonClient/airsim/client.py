@@ -1064,6 +1064,14 @@ class VehicleClient:
         """
         self.client.call('simSetWind', wind)
 
+    def simCustomInfo(self, custom_info):
+        """
+        send custom_info to Engine with string format,will get a reply string 
+        Args:
+            custom_info (string): custom_info,can be any string,will be delegate to UE in simmode_ 
+        """
+        return self.client.call('simCustomInfo', custom_info)
+
     def simCreateVoxelGrid(self, position, x, y, z, res, of):
         """
         Construct and save a binvox-formatted voxel grid of environment
