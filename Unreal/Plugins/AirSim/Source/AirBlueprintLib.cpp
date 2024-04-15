@@ -167,7 +167,7 @@ void UAirBlueprintLib::enableViewportRendering(AActor* context, bool enable)
 
 std::string UAirBlueprintLib::customInfo(const std::string& custom_info)
 {
-    return std::string();
+    return std::string("ok");
 }
 
 
