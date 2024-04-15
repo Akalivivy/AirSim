@@ -727,7 +727,7 @@ void WorldSimApi::setWind(const Vector3r& wind) const
     simmode_->setWind(wind);
 }
 
-std::string setCustomInfo(const std::string& custom_info) const
+std::string WorldSimApi::setCustomInfo(const std::string& custom_info) const
 {
     simmode_->setCustomInfo(custom_info);
 }

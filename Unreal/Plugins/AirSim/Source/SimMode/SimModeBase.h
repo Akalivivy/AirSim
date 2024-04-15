@@ -64,6 +64,8 @@ public:
 
     virtual void setWind(const msr::airlib::Vector3r& wind) const;
 
+    std::string setCustomInfo(const std::string& custom_info) const;
+
     virtual void setTimeOfDay(bool is_enabled, const std::string& start_datetime, bool is_start_datetime_dst,
                               float celestial_clock_speed, float update_interval_secs, bool move_sun);
 
@@ -123,6 +125,8 @@ public:
     TMap<FString, FAssetData> asset_map;
     TMap<FString, AActor*> scene_object_map;
     UMaterial* domain_rand_material_;
+
+
 
 protected: //must overrides
     typedef msr::airlib::AirSimSettings AirSimSettings;
