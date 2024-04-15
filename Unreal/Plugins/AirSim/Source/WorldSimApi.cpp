@@ -729,7 +729,7 @@ void WorldSimApi::setWind(const Vector3r& wind) const
 
 std::string WorldSimApi::customInfo(const std::string& custom_info) const
 {
-    simmode_->customInfo(custom_info);
+    return simmode_->customInfo(custom_info);
 }
 
 std::vector<std::string> WorldSimApi::listVehicles() const
