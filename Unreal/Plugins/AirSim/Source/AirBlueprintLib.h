@@ -46,7 +46,6 @@ class UAirBlueprintLib : public UBlueprintFunctionLibrary
     GENERATED_BODY()
 
 public:
-    static std::string customInfo(const std::string& custom_info);
     static void OnBeginPlay();
     static void OnEndPlay();
     static void LogMessageString(const std::string& prefix, const std::string& suffix, LogDebugLevel level, float persist_sec = 60);

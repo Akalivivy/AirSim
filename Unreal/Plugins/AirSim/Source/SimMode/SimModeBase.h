@@ -16,6 +16,7 @@
 #include "common/StateReporterWrapper.hpp"
 #include "LoadingScreenWidget.h"
 #include "UnrealImageCapture.h"
+#include "Delegates/DelegateCombinations.h"
 #include "SimModeBase.generated.h"
 
 DECLARE_DYNAMIC_MULTICAST_DELEGATE(FLevelLoaded);
@@ -63,6 +64,11 @@ public:
     virtual void continueForFrames(uint32_t frames);
 
     virtual void setWind(const msr::airlib::Vector3r& wind) const;
+
+    DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FCustomInfoDelegate, const FString&, custom_info);
+
+    UPROPERTY(BlueprintAssignable, Category = "Airsim")
+        FCustomInfoDelegate customInfoDelegate;
 
     std::string customInfo(const std::string& custom_info) const;
 
